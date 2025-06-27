@@ -22,8 +22,6 @@ A simple and interactive number guessing game built with **React + TypeScript**.
 
 ## 📸 Screenshots
 
-| Starting State | Playing State | End State |
-|----------------|----------------|-----------|
 | ![image](https://github.com/user-attachments/assets/a4c22631-ecc8-4a31-ac17-a5e9101a322c)
  | ![image](https://github.com/user-attachments/assets/ea13a0d3-1198-4f78-bbba-a47f68dfa54f)
 | ![image](https://github.com/user-attachments/assets/72a938c7-cfcd-4aaf-94a3-ed07b3e8ae41)
