@@ -32,9 +32,9 @@ export const reducer = (state: State, action: Action): State => {
       if (guess === state.target) {
         feedback = "Correct";
       } else if (guess < state.target) {
-        feedback = "Too low!";
+        feedback = `${guess} is too low!`;
       } else {
-        feedback = " Too high!";
+        feedback = `${guess} is too high!`;
       }
 
       return {
