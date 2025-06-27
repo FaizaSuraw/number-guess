@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# Number Guessing Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive number guessing game built with **React + TypeScript**. The user tries to guess a randomly generated number between 1 and 100, with a maximum of 10 attempts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Input validation for numbers between 1 and 100
+- Feedback on guesses: Too high / Too low
+- Score calculation based on attempts
+- Game state management with `useReducer`
+- Fully responsive and clean UI
+- Win and Loss messages with score display
+- New Game button to reset the state
+- Disabled input/guess button before game starts
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** (with functional components)
+- **TypeScript**
+- **CSS** (custom styling)
+- **Vite** (for fast development)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+## 📸 Screenshots
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| ![image](https://github.com/user-attachments/assets/a4c22631-ecc8-4a31-ac17-a5e9101a322c)
+ | ![image](https://github.com/user-attachments/assets/ea13a0d3-1198-4f78-bbba-a47f68dfa54f)
+| ![image](https://github.com/user-attachments/assets/72a938c7-cfcd-4aaf-94a3-ed07b3e8ae41)
+|
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+## 📦 Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/number-guessing-game.git
+cd number-guessing-game
+
+## **Install dependencies**
+
+npm install
+
+Run the app
+
+npm run dev
+
+The app will open in http://localhost:5173/ by default.
+
+🧠 Game Logic
+
+1. Random number is generated between 1–100.
+
+2. User has 10 attempts.
+
+3. Each guess gives feedback: too high, too low, or correct.
+
+4. Game ends on correct guess or after 10 tries.
+
+5. Score = ((10 - attemptsUsed) / 10) * 100.
+
+📂 Folder Structure
+src/
+│
+
+├── components/
+
+│   ├── Game.tsx
+
+│   ├── InputSection.tsx
+
+│   ├── Feedback.tsx
+
+│
+├── numberGuessGame.ts  # reducer + initial state
+
+├── App.tsx
+
+└── main.tsx
